@@ -38,7 +38,7 @@ button {
 
 #form-habits {
   display: flex;
-  padding: 0 3rem;
+  padding: 0 3rem 3rem;
 }
 
 .habits {
@@ -99,6 +99,7 @@ input {
   border-radius: 8px;
 
   background: #18181B;
+  cursor: pointer;
 }
 
 /* pseudo selector */
