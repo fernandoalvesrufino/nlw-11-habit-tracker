@@ -47,4 +47,6 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
+by Fernando Rufino
+
+> Projeto criado pela Rocketseat durante a semana NLW Setup
