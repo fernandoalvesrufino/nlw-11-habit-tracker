@@ -4,108 +4,120 @@
   box-sizing: border-box;
 }
 
-.game {
+body {
+  background-color: #09090a;
+  color: white;
+
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 3rem;
+  position: fixed;
+  background-color: #09090a;
   width: 100%;
-  height: 500px;
-  border-bottom: 15px solid green;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(#87CEEB, #E0F6FF);
 }
 
-#pipe {
-  position: absolute;
-  bottom: 0;
-  width: 80px;
-  animation: pipe-animation 1.5s infinite linear;
-}
-
-#mario {
-  width: 150px;
-  position: absolute;
-  bottom: 0;
-}
-
-.jump {
-  animation: jump 500ms ease-out;
-}
-
-#nuvens {
-  width: 500px;
-  position: absolute;
-  animation: animacao-nuvens 25s infinite linear;
-}
-
-#gameover {
-  width: 400px;
-  margin-left: 100%;
-  position: absolute; 
-}
-
-#atualizar {
-  width: 50px;
-  margin-left: 100%;
-  position: absolute;
-  margin-top: 350px;
-  border: 0px;
+button {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #8b5cf6;
   background-color: transparent;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 125%;
+}
+
+button:hover {
   cursor: pointer;
-  transition: transform 0.45s ease
 }
 
-#atualizar:hover{
-  transform: scale(1.1);
+#form-habits {
+  display: flex;
+  padding: 11.375rem 3rem 3rem;
+  width: fit-content;
 }
 
-#pontuacao {
-  position: absolute; 
-  top: 27px;
-  left: 85%;
-  font-family: 'Silkscreen';
+.habits {
+  margin-top: 3.75rem;
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.75rem;
 }
 
-#record {
-  position: absolute; 
-  top: 10px;
-  left: 85%;
-  font-family: 'Silkscreen';
+.habit {
+  width: 3.75rem;
+  height: 3.75rem;
+
+  /* font-size: 2rem; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-@keyframes animacao-nuvens {
-  from {
-    right: -500px;
-  }
-  to {
-    right: 100%;
-  }
+.habit img {
+  height: 2.5rem;
 }
 
-@keyframes pipe-animation {
-  from {
-    right: -80px;
-  }
-  to {
-    right: 100%;
-  }
+.days {
+  display: flex;
+  gap: 3rem;
+  margin-left: 2rem;
 }
 
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
-@keyframes jump {
-  0% {
-    bottom: 0px;  
-  }
-  40% {
-    bottom: 180px;  
-  }
-  50% {
-    bottom: 180px;  
-  }
-  60% {
-    bottom: 180px;  
-  }
-  100% {
-    bottom: 0px;  
+.day div {
+  margin-bottom: 0.5rem;
+
+  font-family: 'Roboto Mono';
+  font-size: 1.25rem;
+  line-height: 125%;
+
+  color: #A1A1AA;
+
+  text-align: center;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 4rem;
+  height: 4rem;
+
+  border: 2px solid #27272A;
+  border-radius: 8px;
+
+  background: #18181B;
+  cursor: pointer;
+}
+
+/* pseudo selector */
+input:checked {
+  background: #8B5CF6;
+  border: 2px solid #A78BFA;
+}
+
+@media (max-width: 570px) {
+  button div {
+    display: none;
   }
 }
